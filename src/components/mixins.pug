@@ -1,0 +1,45 @@
+mixin imageblock(imagesrc, image2src)
+  .imageblock
+    picture
+      if imagesrc
+        img(src=imagesrc)
+      if image2src
+        img(src=image2src)
+    if block
+      block
+
+mixin freizeit(ziel, ort, nachUsingen, nachOberMoerlen, link)
+  tr
+    if link
+      td
+        a(href=link)
+          = ziel
+    else
+      td= ziel
+    td !{ort.replace(/,/g, ',<br/>')}
+    td= nachUsingen
+    td= nachOberMoerlen
+
+mixin select(name, start, end, required)
+  - var n = start;
+  select(name=name, required=required)
+    option
+    while n <= end
+      option= n
+      - n++;
+
+mixin selectMonth(name, required)
+  select(name=name, required=required)
+    option
+    option Januar
+    option Februar
+    option März
+    option April
+    option Mai
+    option Juni
+    option Juli
+    option August
+    option September
+    option Oktober
+    option November
+    option Dezember

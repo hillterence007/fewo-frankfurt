@@ -1,0 +1,94 @@
+extends components/layout
+
+block content
+  h1 Freizeit
+
+  table.small(width="100%")
+    tr 
+      th Ziel
+      th Ort
+      th km nach<br />Usingen
+      th km nach<br />Ober-Mörlen
+    tr
+      th(colspan="4") Ausgehen
+
+    +freizeit("Spielcasino", "Bad Homburg", 22, 22, "http://spielbank-bad-homburg.de")
+    +freizeit("Tanzlokal Cafe König", "Bad Nauheim", 16, 6)
+    +freizeit("Tanzlokal Die Scheune","Bad Nauheim",16,6, "http://www.die-scheune.net/")
+    +freizeit("Tanzlokal Tiffany","Bad Homburg",19, 19)
+    +freizeit("Landgasthof Tannenhof","Usingen",4, 14, "http://www.tannenhof-usingen.de/")
+    +freizeit("Restaurant Walkmühle","Usingen",3, 13, "http://www.walkmuehle-taunus.de")
+    +freizeit("Eschbacher Katz","Usingen",2, 13, "https://www.eschbacher-katz.de/")
+
+    tr
+      th(colspan="4") Baden
+
+    +freizeit("Badesee Hattsteinweiher","Usingen",5, 15, "https://taunus.info/angebote/sport-und-outdoor/schwimmen/hattsteinweiher/911/")
+    +freizeit("Freibad","Maibach",2, 10,"https://www.evb-butzbach.de/de/Baeder/Freibad-Maibach/Oeffnungszeiten-Preise/")
+    +freizeit("Hallenbad","Usingen",4, 14, "https://taunus.info/angebote/sport-und-outdoor/schwimmen/taunusbad/913/")
+    +freizeit("Taunustherme","Bad Homburg",22, 22, "http://www.taunus-therme.de")
+    +freizeit("Usa- Wellenbad","Bad Nauheim",17, 7, "http://www.usa-wellenbad.de")
+
+    tr
+      th(colspan="4") Kinderfreizeit
+
+    +freizeit("Freizeitpark","Schlangenbad",57, 67, "http://taunuswunderland.de")
+    +freizeit("Freizeitpark Lochmühle","Wehrheim",10, 18, "http://www.lochmuehle.de")
+    +freizeit("Kinderspielplatz","Usingen",0.1, 11)
+    +freizeit("Kinderspielplatz","Ober-Mörlen",11, 0.4)
+
+    tr
+      th(colspan="4") Sehenswert
+
+    +freizeit("Alligatorfarm","Ockstadt",16, 6)
+    +freizeit("Apfelweinkelterei","Laubuseschbach",21, 31, "http://www.kelterei-heil.de")
+    +freizeit("Elvis 'Seine Zeit in Germany'","Bad Nauheim",15, 5, "http://www.elvis-presley-verein.de/")
+    +freizeit("Eschbacher Klippen","Usingen Eschbacher Klippen",2, 12)
+    +freizeit("Frankfurter Flughafen","Frankfurt",45, 40, "http://www.airportcity-frankfurt.de")
+    +freizeit("Freilichtmuseum Hessenpark","Neu Anspach",12, 20, "http://www.hessenpark.de")
+    +freizeit("Kristallhöhle","Kubach",28, 38, "http://www.kubacherkristallhoehle.de")
+    +freizeit("Maintower","Frankfurt",37, 33,"https://www.maintower.de/")
+    +freizeit("Messe","Frankfurt",36, 36, "http://www.messefrankfurt.com")
+    +freizeit("Palmengarten","Frankfurt",35, 36, "http://www.palmengarten.de")
+    +freizeit("Römerkastell Saalburg","Bad Homburg",12, 20, "http://www.saalburgmuseum.de")
+    +freizeit("Schloß","Bad Homburg",19, 21, "http://www.schloesser-hessen.de")
+    +freizeit("Schloß","Braunfels",28, 38, "http://www.braunfels.de")
+    +freizeit("Schloß","Weilburg",30, 40, "http://www.weilburg-lahn.info")
+
+    tr
+      th(colspan="4") Sport
+
+    +freizeit("Angelteiche","Usingen",1, 11)
+    +freizeit("Ballon fahren","Usingen",3, 13)
+    +freizeit("Bowling","Friedberg, Dieselstr.1, 06031-14711",17, 7)
+    +freizeit("Bowling","Oberstedten",20, 22, "http://www.magic-bowl.de/")
+    +freizeit("Dart","Usingen",0.5, 11)
+    +freizeit("Eissporthalle","Bad Nauheim",15, 5, "http://www.bad-nauheim.de")
+    +freizeit("Fußball, Basketball, Badminton","Usingen",0.5, 11)
+    +freizeit("Golf","Bad Homburg",17, 23,"http://www.homburger-gc.de/")
+    +freizeit("Golf","Bad Nauheim",15, 5, "http://www.gcbadnauheim.de")
+    +freizeit("Golf","Bad Vilbel",33, 30, "http://www.bad-vilbeler-golfclub.de")
+    +freizeit("Golf","Friedberg",16, 6, "http://www.golfclub-friedberg.de")
+    +freizeit("Golf","Idstein",30, 40, "http://www.golfpark-idstein.de")
+    +freizeit("Golf","Kronberg",29, 33, "http://www.gc-kronberg.de")
+    +freizeit("Golf","Waldsolms",16, 25,"https://www.attighof.de/")
+    +freizeit("Golf","Weilrod",14, 24, "https://www.golfclub-weilrod.de/gc-weilrod/")
+    +freizeit("Kegeln","Grävenwiesbach",10, 20, "http://www.gasthaus-zur-eisenbahn.de")
+    +freizeit("Kegeln","Pfaffenwiesbach",5, 15)
+    +freizeit("Kegeln","Wesperfeld",8, 18, "https://www.landhotel-velte.de/")
+    +freizeit("Eco Kart Frankfurt","Frankfurt",36, 30, "https://eco-kart.de/")
+    +freizeit("Sportflughafen","Neu Anspach",12, 20, "http://www.lsc-badhomburg.de")
+    +freizeit("Sportflughafen","Ober-Mörlen",11, 1)
+    +freizeit("Tennisfreiplätze","Usingen",2, 12)
+    +freizeit("Tennishalle","Usingen",5, 15, "http://www.tennishalle-usingen.de")
+    +freizeit("Tennishalle","Ober-Mörlen",10, 0.5)
+
+    tr
+      th(colspan="4") Tiere
+
+    +freizeit("Lama Trekking","Usingen",5,15,"http://www.lama-llamera.de/")
+    +freizeit("Opel- Zoo","Kronberg",29,33, "http://www.opel-zoo.de")
+    +freizeit("Papageienpark","Weilrod",17,27, "http://www.vogelburg.de")
+    +freizeit("Streichelzoo mit Kamelen u. Lamas","Usingen",0.1,11)
+    +freizeit("Tiergarten","Weilburg",30,40, "http://www.weilburg.de")
+    +freizeit("Zoo","Frankfurt",40,37, "http://www.zoo-frankfurt.de/")

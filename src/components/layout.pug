@@ -1,0 +1,39 @@
+include mixins
+
+doctype
+html(lang="de")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Ferienwohnungen-Frankfurt
+  body
+    .page
+      header.header
+        a(href="index.html") ferienwohnungen-frankfurt.com
+        small
+          div Reinhold Wolf
+          div Lindenstr. 23, 61250 Usingen
+          div Phone:&nbsp;
+            a(href="tel:+49608166745") +49(0)6081 66745
+          div Mobil:&nbsp;
+            a(href="tel:+4917643438984") +49(0)176 43438984
+          div E-Mail:&nbsp;
+            a(href="mailto:wolf.usingen@t-online.de")
+            | wolf.usingen@t-online.de
+
+      .content
+        input#nav(type="checkbox", name="nav")
+        include navigation
+
+        article.article
+          block content
+
+      footer.footer
+        span 
+          a(href="impressum.html") Impressum
+          | &nbsp;|&nbsp;
+        span
+          a(href="datenschutz.html") Datenschutz
+          | &nbsp;|&nbsp;
+        span
+          a(href="agbs.html") Allgemeine Geschäftsbedingungen
