@@ -1,4 +1,4 @@
-name: Generate dist folder
+name: Generate and deploy
 
 on:
   push:
@@ -9,8 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - uses: egordm/gha-yarn-node-cache@v1
+
       - name: Install JS dependencies
         run: yarn install
+
       - name: Deploy to dist
         run: yarn build
+
+      - name: Deploy on FTP
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ${{ secrets.FTP_SERVER }}
+          ftp-username: ${{ secrets.FTP_USER }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: dist
