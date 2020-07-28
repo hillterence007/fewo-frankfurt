@@ -1,0 +1,16 @@
+name: Generate dist folder
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  build_dist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: egordm/gha-yarn-node-cache@v1
+      - name: Install JS dependencies
+        run: yarn install
+      - name: Test
+        run: yarn deploy
