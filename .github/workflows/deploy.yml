@@ -12,5 +12,5 @@ jobs:
       - uses: egordm/gha-yarn-node-cache@v1
       - name: Install JS dependencies
         run: yarn install
-      - name: Test
-        run: yarn deploy
+      - name: Deploy to dist
+        run: yarn build
