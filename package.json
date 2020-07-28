@@ -21,6 +21,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
+    "init": "npm install",
     "start": "webpack-dev-server --open",
     "build": "webpack --mode=production",
     "deploy": "git add . && git commit -m \"update\" && git push"
