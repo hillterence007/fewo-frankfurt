@@ -22,6 +22,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "deploy": "git add . && git commit -m \"update\" && git push"
   }
 }
