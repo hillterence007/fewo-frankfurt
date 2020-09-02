@@ -8,40 +8,26 @@ block content
     aus.<br />
     Ihre Anfrage ist unverbindlich, Felder mit einem * müssen ausgefüllt werden.
 
-  form(
-    action="mailto:wolf.usingen@t-online.de?subject=Antwort ueber Ferienwohnungen-Frankfurt.com",
-    method="post",
-    name="Formular",
-    enctype="text/plain",
-    onsubmit="return chkFormular()"
-  )
+  form(method="post", name="Formular", enctype="text/plain")
     h3 Anfrage / Buchungswünsche *
 
     fieldset 
       label vom
-      +select("Vom T", 1, 31, true)
-      +selectMonth("Vom M", true)
-      +select("Vom J", 2020, 2040, true)
+      +datepicker('vom', true)
 
     fieldset
       label bis
-      +select("Bis T", 1, 31, true)
-      +selectMonth("Bis M", true)
-      +select("Bis J", 2020, 2040, true)
+      +datepicker('bis', true)
 
     h3 Alternativer Zeitraum
 
     fieldset 
       label vom
-      +select("Alternative vom T", 1, 31, false)
-      +selectMonth("Alternative vom M", false)
-      +select("Alternative vom J", 2020, 2040, false)
+      +datepicker('Alternative vom', false)
 
     fieldset
       label bis
-      +select("Alternative bis T", 1, 31, false)
-      +selectMonth("Alternative bis M", false)
-      +select("Alternative bis J", 2020, 2040, false)
+      +datepicker('Alternative bis', false)
 
     h3 &nbsp;
 
@@ -98,7 +84,7 @@ block content
       input(name="Firma", type="text")
     fieldset
       label E-Mail *
-      input(name="E_Mail", type="text", required)
+      input(name="E-Mail", type="email", required)
     fieldset
       label Telefon
       input(name="Telefon", type="text")

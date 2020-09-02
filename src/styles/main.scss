@@ -360,7 +360,8 @@ form {
     font-size: 18px;
     line-height: 18px;
 
-    &[type='text'] {
+    &[type='text'],
+    &[type='email'] {
       width: 100%;
 
       @media (min-width: 500px) {

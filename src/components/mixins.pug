@@ -20,6 +20,9 @@ mixin freizeit(ziel, ort, nachUsingen, nachOberMoerlen, link)
     td= nachUsingen
     td= nachOberMoerlen
 
+mixin datepicker(name, required)
+  input(type="date", name=name, required=required)
+
 mixin select(name, start, end, required)
   - var n = start;
   select(name=name, required=required)
