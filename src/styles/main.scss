@@ -359,14 +359,16 @@ form {
     padding: 2px 5px;
     font-size: 18px;
     line-height: 18px;
+    width: 100%;
+    max-width: 380px;
 
-    &[type='text'],
-    &[type='email'] {
-      width: 100%;
+    @media (min-width: 500px) {
+      width: calc(100% - 250px);
+    }
 
-      @media (min-width: 500px) {
-        width: calc(100% - 250px);
-      }
+    &[type='submit'],
+    &[type='reset'] {
+      width: auto;
     }
 
     + label {
@@ -378,6 +380,12 @@ form {
     padding: 2px 5px;
     font-size: 18px;
     line-height: 18px;
+    width: 100%;
+    max-width: 380px;
+
+    @media (min-width: 500px) {
+      width: calc(100% - 250px);
+    }
 
     + select {
       margin-left: 2px;
@@ -386,6 +394,7 @@ form {
 
   textarea {
     width: 100%;
+    max-width: calc(250px + 380px);
     padding: 2px 5px;
     font-size: 18px;
     line-height: 18px;
