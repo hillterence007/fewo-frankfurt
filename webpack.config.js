@@ -44,9 +44,6 @@ module.exports = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {
-              output: './dist/css/',
-            },
           },
           'css-loader',
           'sass-loader',

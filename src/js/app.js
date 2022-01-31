@@ -18,7 +18,7 @@ if (form) {
     });
 
     location.href =
-      'mailto:wolf.usingen@t-online.de?subject=Antwort%20ueber%20Ferienwohnungen-Frankfurt.com&body=Ihre%20Daten:%0a%0a' +
+      'mailto:info@ferienwohnungen-frankfurt.com?subject=Antwort%20ueber%20Ferienwohnungen-Frankfurt.com&body=Ihre%20Daten:%0a%0a' +
       email;
   });
 }
