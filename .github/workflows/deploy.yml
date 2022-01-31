@@ -1,4 +1,4 @@
-name: Generate and deploy
+name: 🚀 Generate and deploy
 
 on:
   push:
@@ -10,17 +10,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install JS dependencies
+      - name: 🚚 Install JS dependencies
         run: npm install
 
-      - name: Deploy to dist
+      - name: 🎉 Deploy to dist
         run: npm run build
 
-      - name: Deploy on FTP
+      - name: 📂 Deploy on FTP
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          ftp-server: ${{ secrets.FTP_SERVER }}
-          ftp-username: ${{ secrets.FTP_USER }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
-          git-ftp-args: --insecure
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist
