@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: 🚚 Install JS dependencies
-        run: npm install
+        run: npm i --legacy-peer-deps
 
       - name: 🎉 Deploy to dist
         run: npm run build
